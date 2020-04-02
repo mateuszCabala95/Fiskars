@@ -13,7 +13,9 @@ body {
 
 .btn{
     text-decoration: none;
+    display: inline-block;
     color: white;
+    background-color: var(--primary-color);
     padding: 10px 25px;
     border: 2px solid white;
     border-radius: 19px;
@@ -159,4 +161,33 @@ border-top: 1px solid var(--primary-color);
     border: 2px solid white;
     border-radius: 19px;
     padding: 10px 20px;
+}
+
+.about{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.about  h2:after{
+    content: "";
+    display: block;
+    width: 120px;
+
+    border-top: 1px solid var(--primary-color);
+    margin: 25px auto;
+}
+
+.about h3{
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.about p {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.about a.btn {
+    margin: 25px 0;
 }
