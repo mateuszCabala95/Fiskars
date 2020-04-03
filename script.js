@@ -4,9 +4,6 @@ const header = document.querySelector('header');
 const menu = document.querySelector('.menu');
 
 
-let counter = 0;
-
-
 menuMobileButton.addEventListener('click', () => {
 
     menu.classList.toggle('menu--hidden');

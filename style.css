@@ -11,18 +11,18 @@ body {
     font-family: 'Exo 2', sans-serif;
 }
 
-h2{
+h2 {
     width: 100%;
     text-align: center;
+    font-weight: bold;
 }
 
-h2:after{
+h2:after {
     content: "";
     width: 150px;
     display: block;
     margin: 25px auto;
     border-top: 1px solid var(--primary-color);
-    font-weight: bold;
 }
 
 .btn {
@@ -35,16 +35,40 @@ h2:after{
     border-radius: 19px;
 }
 
+@media screen and (min-width: 768px) {
+    h2 {
+        margin-top: 50px;
+        font-size: 1.8em;
+    }
+
+    h2:after {
+        width: 250px;
+        margin: 35px auto;
+        border-top: 1px solid var(--primary-color);
+    }
+
+    .btn {
+        font-size: 1.2em;
+        padding: 15px 30px;
+        border: 2px solid white;
+        border-radius: 25px;
+    }
+}
+
 /*HEADER*/
-header{
+header {
     display: flex;
     flex-wrap: wrap;
-    height: 10vh;  /*open menu take 30vh */
+    height: 10vh; /*open menu take 30vh */
+
+    transition: 0.2s ease;
 }
-.open-header{
+
+.open-header {
     height: 30vh;
 }
-.navbar{
+
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -57,26 +81,35 @@ header{
 
     background-color: white;
 }
+
 .navbar a {
     width: 50%;
 }
-.mobile-btn{
+
+.mobile-btn {
     background-color: transparent;
     border: none;
 }
-.navbar img{
+
+.navbar img {
     display: inline-block;
     max-width: 100%;
 }
-.menu{
+
+.menu {
     position: absolute;
     top: 50px;
     width: 100%;
+    background-color: white;
+
+    transition: 0.2s ease;
 }
-.menu--hidden{
+
+.menu--hidden {
     top: -50vh;
 }
-.menu ul{
+
+.menu ul {
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -84,11 +117,13 @@ header{
 
     transition: 0.2s ease-out;
 }
-.menu li{
+
+.menu li {
     text-align: center;
     margin: 5px 0;
 }
-.menu a{
+
+.menu a {
     text-decoration: none;
     color: black;
 }
@@ -97,6 +132,7 @@ header{
 .header {
     background: var(--primary-color) url("assets/images/foto_banner.jpg") center no-repeat;
 }
+
 .text-container {
     display: flex;
     flex-direction: column;
@@ -108,9 +144,11 @@ header{
 
     width: 100%;
 }
+
 .text-container h1:first-letter {
     text-transform: uppercase;
 }
+
 .text-container h1::after {
     content: '';
     display: block;
@@ -118,13 +156,27 @@ header{
     width: 200px;
     margin: 25px auto;
 }
+
 .text-container p {
     text-transform: uppercase;
     font-weight: 400;
     margin: 0 25px;
 }
+
 .text-container .btn {
     margin: 25px auto;
+}
+
+@media screen and (min-width: 768px) {
+    .text-container {
+        margin: 25px 0;
+        line-height: 2em;
+        padding: 0 50px;
+    }
+
+    .text-container h1 {
+        font-size: 2em;
+    }
 }
 
 /*SECTION PRODUCTS*/
@@ -134,15 +186,18 @@ header{
     justify-content: center;
     align-items: center;
 }
+
 .product-container {
     text-align: center;
     max-width: 300px;
     margin: 25px;
 }
-.product-container:hover{
+
+.product-container:hover {
     color: var(--primary-color);
     cursor: pointer;
 }
+
 .product-container h3 {
     text-transform: uppercase;
 }
@@ -154,14 +209,17 @@ header{
     width: 80%;
     margin: 0 auto;
 }
+
 .single-article {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
+
 .single-article:nth-of-type(2) {
     flex-direction: column-reverse;
 }
+
 .single-article .container {
     width: 100%;
     margin: 0 auto;
@@ -169,11 +227,13 @@ header{
 
     background-color: var(--primary-color);
 }
+
 .single-article .img {
     width: 100%;
     min-height: 250px;
     height: auto;
 }
+
 .single-article a {
     display: inline-block;
     text-decoration: none;
@@ -183,22 +243,47 @@ header{
     padding: 10px 20px;
 }
 
+@media screen and (min-width: 768px) {
+    .articles {
+        width: 90%;
+    }
+
+    .single-article h3 {
+        font-size: 1.5em;
+    }
+
+    .single-article p {
+        line-height: 1.5em;
+    }
+
+    .single-article a {
+        margin: 25px;
+    }
+}
+
 /*SECTION ABOUT*/
 .about {
     text-align: center;
     width: 90%;
     margin: 0 auto;
 }
+
 .about h3 {
     color: var(--primary-color);
     font-weight: 400;
 }
+
 .about p {
     font-weight: bold;
     text-transform: uppercase;
 }
+
 .about a.btn {
     margin: 25px 0;
+}
+
+@media screen and (min-width: 1200px) {
+
 }
 
 /*SECTION FIND*/
@@ -206,10 +291,18 @@ header{
     width: 100%;
     text-align: center;
 }
+
 .find iframe {
     width: 100%;
     height: auto;
     border-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+    .find {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 /*SECTION CONTACT*/
@@ -222,22 +315,38 @@ header{
     color: white;
     margin-top: 25px;
 }
-.contact-container{
+
+.contact-container {
     width: 80%;
     margin: 0 auto;
     text-align: left;
 }
-.contact-container h3{
+
+.contact-container h3 {
     font-weight: bold;
 }
-.contact-container address{
+
+.contact-container address {
     font-weight: 300;
     color: var(--primary-color);
     font-style: normal;
     text-decoration: none;
     line-height: 2em;
 }
-.contact-container a{
+
+.contact-container a {
     text-decoration: none;
     color: var(--primary-color);
+}
+
+@media screen and (min-width: 768px) {
+    .contact {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 25px;
+    }
+
+    .contact-container {
+        width: 40%;
+    }
 }
