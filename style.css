@@ -41,7 +41,9 @@ header{
     flex-wrap: wrap;
     height: 10vh;  /*open menu take 30vh */
 }
-
+.open-header{
+    height: 30vh;
+}
 .navbar{
     position: fixed;
     top: 0;
