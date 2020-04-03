@@ -10,6 +10,7 @@
 body {
     font-family: 'Exo 2', sans-serif;
 }
+
 h2{
     width: 100%;
     text-align: center;
@@ -34,12 +35,66 @@ h2:after{
     border-radius: 19px;
 }
 
-/*SECTION HEADER*/
+/*HEADER*/
+header{
+    display: flex;
+    flex-wrap: wrap;
+    height: 10vh;  /*open menu take 30vh */
+}
 
+.navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-around;
+
+    background-color: white;
+}
+.navbar a {
+    width: 50%;
+}
+.mobile-btn{
+    background-color: transparent;
+    border: none;
+}
+.navbar img{
+    display: inline-block;
+    max-width: 100%;
+}
+.menu{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+}
+.menu--hidden{
+    top: -50vh;
+}
+.menu ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    list-style: none;
+
+    transition: 0.2s ease-out;
+}
+.menu li{
+    text-align: center;
+    margin: 5px 0;
+}
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+
+/*SECTION HEADER*/
 .header {
     background: var(--primary-color) url("assets/images/foto_banner.jpg") center no-repeat;
 }
-
 .text-container {
     display: flex;
     flex-direction: column;
@@ -51,11 +106,9 @@ h2:after{
 
     width: 100%;
 }
-
 .text-container h1:first-letter {
     text-transform: uppercase;
 }
-
 .text-container h1::after {
     content: '';
     display: block;
@@ -63,64 +116,50 @@ h2:after{
     width: 200px;
     margin: 25px auto;
 }
-
 .text-container p {
     text-transform: uppercase;
     font-weight: 400;
     margin: 0 25px;
 }
-
 .text-container .btn {
     margin: 25px auto;
 }
 
-
 /*SECTION PRODUCTS*/
-
 .products {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
 }
-
 .product-container {
     text-align: center;
     max-width: 300px;
     margin: 25px;
 }
-
-.product-container:hover, .product-container:active {
+.product-container:hover{
     color: var(--primary-color);
     cursor: pointer;
 }
-
 .product-container h3 {
     text-transform: uppercase;
-
 }
 
 /*SECTION INSPIRATION*/
-
 .articles {
     display: flex;
     flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
 }
-
-
 .single-article {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
-
 .single-article:nth-of-type(2) {
     flex-direction: column-reverse;
 }
-
 .single-article .container {
     width: 100%;
     margin: 0 auto;
@@ -128,15 +167,11 @@ h2:after{
 
     background-color: var(--primary-color);
 }
-
 .single-article .img {
     width: 100%;
     min-height: 250px;
     height: auto;
 }
-
-
-
 .single-article a {
     display: inline-block;
     text-decoration: none;
@@ -146,42 +181,36 @@ h2:after{
     padding: 10px 20px;
 }
 
+/*SECTION ABOUT*/
 .about {
     text-align: center;
     width: 90%;
     margin: 0 auto;
 }
-
 .about h3 {
     color: var(--primary-color);
     font-weight: 400;
 }
-
 .about p {
     font-weight: bold;
     text-transform: uppercase;
 }
-
 .about a.btn {
     margin: 25px 0;
 }
 
-.find {
-    width: 80%;
-    margin: 0 auto;
-}
-
+/*SECTION FIND*/
 .find {
     width: 100%;
     text-align: center;
 }
-
 .find iframe {
     width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
+/*SECTION CONTACT*/
 .contact {
     display: flex;
     flex-direction: column;
@@ -191,17 +220,14 @@ h2:after{
     color: white;
     margin-top: 25px;
 }
-
 .contact-container{
     width: 80%;
     margin: 0 auto;
     text-align: left;
 }
-
 .contact-container h3{
     font-weight: bold;
 }
-
 .contact-container address{
     font-weight: 300;
     color: var(--primary-color);
