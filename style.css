@@ -44,11 +44,29 @@ h2:after {
     h2:after {
         width: 250px;
         margin: 35px auto;
-        border-top: 1px solid var(--primary-color);
     }
 
     .btn {
         font-size: 1.2em;
+        padding: 15px 30px;
+        border: 2px solid white;
+        border-radius: 25px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    h2 {
+        margin-top: 65px;
+        font-size: 2.2em;
+    }
+
+    h2:after {
+        width: 350px;
+        margin: 45px auto;
+    }
+
+    .btn {
+        font-size: 1.4em;
         padding: 15px 30px;
         border: 2px solid white;
         border-radius: 25px;
@@ -128,6 +146,43 @@ header {
     color: black;
 }
 
+@media screen and (min-width: 1200px) {
+    header {
+        flex-wrap: nowrap;
+        height: auto;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        position: static;
+        width: 45%;
+        z-index: auto;
+    }
+
+    .menu--hidden {
+        top: 0;
+    }
+
+    .mobile-btn {
+        display: none;
+    }
+
+    .menu {
+        position: static;
+        width: 45%;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .menu a {
+        font-size: 1.5em;
+    }
+}
+
 /*SECTION HEADER*/
 .header {
     background: var(--primary-color) url("assets/images/foto_banner.jpg") center no-repeat;
@@ -179,6 +234,25 @@ header {
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .text-container {
+        margin: 0;
+    }
+
+    .text-container h1 {
+        margin: 50px 0 0 0;
+        font-size: 2.4em;
+    }
+
+
+    .text-container h1::after {
+        width: 350px;
+        margin: 25px auto;
+    }
+
+
+}
+
 /*SECTION PRODUCTS*/
 .products {
     display: flex;
@@ -200,6 +274,12 @@ header {
 
 .product-container h3 {
     text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+    .products {
+        justify-content: space-evenly;
+    }
 }
 
 /*SECTION INSPIRATION*/
@@ -258,6 +338,25 @@ header {
 
     .single-article a {
         margin: 25px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .single-article {
+        flex-direction: row;
+    }
+    .single-article:nth-of-type(2) {
+        flex-direction: row-reverse;
+    }
+
+    .single-article .container {
+        width: 50%;
+        padding: 20px;
+
+    }
+
+    .single-article .img {
+        width: 50%;
     }
 }
 
@@ -348,5 +447,13 @@ header {
 
     .contact-container {
         width: 40%;
+    }
+}
+@media screen and (min-width: 1200px){
+    .contact{
+        justify-content: space-evenly;
+    }
+    .contact-container {
+        width: 20%;
     }
 }
