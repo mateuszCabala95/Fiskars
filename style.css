@@ -10,6 +10,19 @@
 body {
     font-family: 'Exo 2', sans-serif;
 }
+h2{
+    width: 100%;
+    text-align: center;
+}
+
+h2:after{
+    content: "";
+    width: 150px;
+    display: block;
+    margin: 25px auto;
+    border-top: 1px solid var(--primary-color);
+    font-weight: bold;
+}
 
 .btn {
     text-decoration: none;
@@ -72,22 +85,6 @@ body {
 
 }
 
-
-.products h2 {
-    width: 100%;
-    text-align: center;
-}
-
-.products h2::after {
-    content: "";
-    width: 150px;
-    display: block;
-    margin: 25px auto;
-    /*color: var(--primary-color);*/
-    border-top: 1px solid var(--primary-color);
-}
-
-
 .product-container {
     text-align: center;
     max-width: 300px;
@@ -113,22 +110,6 @@ body {
     margin: 0 auto;
 }
 
-.articles h2 {
-    width: 100%;
-    text-align: center;
-}
-
-.articles h2:after {
-    content: "";
-    display: block;
-    width: 90px;
-
-    border-top: 1px solid #ff8e02;
-
-    margin: 25px auto;
-
-    font-weight: bold;
-}
 
 .single-article {
     display: flex;
@@ -138,7 +119,6 @@ body {
 
 .single-article:nth-of-type(2) {
     flex-direction: column-reverse;
-    margin-top: 10px;
 }
 
 .single-article .container {
@@ -155,10 +135,6 @@ body {
     height: auto;
 }
 
-.single-article p {
-    font-weight: 400;
-    line-height: 20pt;
-}
 
 
 .single-article a {
@@ -174,15 +150,6 @@ body {
     text-align: center;
     width: 90%;
     margin: 0 auto;
-}
-
-.about h2:after {
-    content: "";
-    display: block;
-    width: 120px;
-
-    border-top: 1px solid var(--primary-color);
-    margin: 25px auto;
 }
 
 .about h3 {
@@ -204,18 +171,9 @@ body {
     margin: 0 auto;
 }
 
-.find h2 {
+.find {
     width: 100%;
     text-align: center;
-}
-
-.find h2:after {
-    content: "";
-    display: block;
-    margin: 25px auto;
-    width: 80px;
-
-    border-top: 1px solid var(--primary-color);
 }
 
 .find iframe {
@@ -231,6 +189,7 @@ body {
 
     background-color: black;
     color: white;
+    margin-top: 25px;
 }
 
 .contact-container{
